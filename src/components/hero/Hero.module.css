@@ -1,0 +1,175 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 92vh;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: absolute;
+  inset: 0;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 23, 52, 0.9) 0%,
+    rgba(8, 23, 52, 0.72) 42%,
+    rgba(8, 23, 52, 0.28) 100%
+  );
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 120px;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 22px;
+}
+
+.content h1 {
+  max-width: 720px;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin-bottom: 26px;
+  opacity: 0;
+
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.45s;
+}
+
+.content p {
+  max-width: 600px;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 42px;
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 0.7s;
+}
+
+.buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+  animation-delay: 1s;
+}
+
+.quoteBtn,
+.rentBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 60px;
+  min-width: 210px;
+
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.quoteBtn {
+  background: #d4af37;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.25);
+}
+
+.quoteBtn:hover {
+  transform: translateY(-4px);
+  background: #c59b17;
+  box-shadow: 0 18px 40px rgba(212, 175, 55, 0.4);
+}
+
+.rentBtn {
+  background: #157347;
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(21, 115, 71, 0.25);
+}
+
+.rentBtn:hover {
+  transform: translateY(-4px);
+  background: #0f5f39;
+  box-shadow: 0 18px 40px rgba(21, 115, 71, 0.4);
+}
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+  animation: zoomHero 18s ease-in-out infinite alternate;
+}
+
+@keyframes zoomHero {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 92vh;
+  overflow: hidden;
+  background: #071b3a;
+
+  z-index: 1;
+}
+.content {
+  padding-bottom: 180px;
+}
+
+/* ===========================
+   Hero Entrance Animation
+=========================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.subtitle {
+  opacity: 0;
+
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+}

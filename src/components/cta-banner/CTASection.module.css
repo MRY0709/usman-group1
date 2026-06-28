@@ -1,0 +1,202 @@
+.section {
+  position: relative;
+  overflow: hidden;
+
+  padding: 140px 0;
+}
+
+.background {
+  object-fit: cover;
+
+  object-position: center;
+
+  animation: zoomBackground 25s ease-in-out infinite alternate;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(7, 27, 58, 0.92),
+    rgba(7, 27, 58, 0.78),
+    rgba(7, 27, 58, 0.55)
+  );
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 35px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
+}
+
+/* ======================
+   Left
+====================== */
+
+.content {
+  max-width: 700px;
+}
+
+.subtitle {
+  display: inline-block;
+
+  color: #d4af37;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+.content h2 {
+  color: white;
+
+  font-size: 62px;
+
+  line-height: 1.08;
+
+  font-weight: 800;
+
+  margin-bottom: 24px;
+}
+
+.content p {
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 18px;
+
+  line-height: 1.8;
+
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+
+/* ======================
+   Buttons
+====================== */
+
+.buttons {
+  display: flex;
+  gap: 18px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  height: 58px;
+
+  padding: 0 34px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.35s;
+}
+
+.primaryBtn {
+  border: none;
+
+  background: #d4af37;
+
+  color: white;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-5px);
+
+  background: #c69f26;
+}
+
+.secondaryBtn {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  color: white;
+}
+
+.secondaryBtn:hover {
+  background: white;
+
+  color: #071b3a;
+
+  transform: translateY(-5px);
+}
+
+/* ======================
+ Floating Card
+====================== */
+
+.floatingCard {
+  width: 310px;
+
+  padding: 34px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: white;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
+
+.rating {
+  color: #ffd34d;
+
+  font-size: 22px;
+
+  letter-spacing: 3px;
+
+  display: block;
+
+  margin-bottom: 16px;
+}
+
+.floatingCard h3 {
+  font-size: 30px;
+
+  margin-bottom: 16px;
+}
+
+.floatingCard p {
+  color: rgba(255, 255, 255, 0.82);
+
+  line-height: 1.8;
+}
+
+/* ======================
+ Animation
+====================== */
+
+@keyframes zoomBackground {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}

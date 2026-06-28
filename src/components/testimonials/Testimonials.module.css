@@ -1,0 +1,330 @@
+.section {
+  padding: 120px 0;
+
+  background: radial-gradient(
+    circle at top,
+    #f8fafc 0%,
+    #f2f5fa 55%,
+    #edf2f7 100%
+  );
+}
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 35px;
+}
+
+/* =========================
+   Heading
+========================= */
+
+.heading {
+  max-width: 780px;
+
+  margin: 0 auto 85px;
+
+  text-align: center;
+}
+
+.subtitle {
+  display: inline-block;
+  color: #d4af37;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.heading h2 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #071b3a;
+  margin-bottom: 20px;
+}
+
+.heading p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #667085;
+}
+
+/* =========================
+   Grid
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* =========================
+   Card
+========================= */
+
+.card {
+  position: relative;
+
+  overflow: hidden;
+
+  background: linear-gradient(180deg, #ffffff 0%, #fcfcfd 100%);
+
+  border-radius: 22px;
+
+  padding: 38px;
+
+  border: 1px solid rgba(7, 27, 58, 0.08);
+
+  box-shadow:
+    0 15px 35px rgba(7, 27, 58, 0.05),
+    0 35px 70px rgba(7, 27, 58, 0.04);
+
+  transition: all 0.4s ease;
+}
+.card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 4px;
+
+  background: #d4af37;
+
+  transform: scaleX(0);
+
+  transition: 0.35s;
+}
+.card::after {
+  content: "";
+
+  position: absolute;
+
+  top: -60px;
+
+  right: -60px;
+
+  width: 180px;
+
+  height: 180px;
+
+  border-radius: 50%;
+
+  background: rgba(212, 175, 55, 0.08);
+
+  filter: blur(35px);
+
+  opacity: 0;
+
+  transition: 0.4s;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.02);
+
+  border-color: #d4af37;
+
+  box-shadow:
+    0 28px 70px rgba(7, 27, 58, 0.12),
+    0 12px 30px rgba(212, 175, 55, 0.12);
+}
+.card:hover .avatar {
+  transform: scale(1.08);
+}
+
+.avatar {
+  transition: transform 0.35s ease;
+}
+/* =========================
+   Stars
+========================= */
+
+.stars {
+  color: #d4af37;
+
+  font-size: 22px;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 24px;
+
+  transition: 0.35s;
+}
+.card:hover .stars {
+  letter-spacing: 7px;
+}
+
+.stars {
+  transition: letter-spacing 0.35s ease;
+}
+/* =========================
+   Review
+========================= */
+
+.review {
+  font-size: 17px;
+
+  line-height: 1.95;
+
+  color: #4b5563;
+
+  font-style: italic;
+
+  margin-bottom: 36px;
+
+  min-height: 150px;
+}
+/* =========================
+   User
+========================= */
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 68px;
+
+  height: 68px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #071b3a, #0d2b5c);
+
+  color: white;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 26px;
+
+  font-weight: 700;
+
+  box-shadow: 0 10px 25px rgba(7, 27, 58, 0.18);
+
+  transition: 0.35s;
+}
+.card:hover .avatar {
+  transform: scale(1.1) rotate(-6deg);
+
+  background: #d4af37;
+}
+.user h4 {
+  font-size: 21px;
+
+  font-weight: 800;
+
+  color: #071b3a;
+
+  margin-bottom: 6px;
+}
+
+.user span {
+  color: #667085;
+  font-size: 15px;
+}
+
+/* =========================
+   Tablet
+========================= */
+
+/*@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+/*@media (max-width: 768px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .heading {
+    margin-bottom: 45px;
+  }
+
+  .heading h2 {
+    font-size: 38px;
+  }
+
+  .heading p {
+    font-size: 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 28px;
+  }
+
+  .review {
+    min-height: auto;
+    font-size: 16px;
+  }
+
+  .avatar {
+    width: 56px;
+    height: 56px;
+    font-size: 22px;
+  }
+}
+/* =========================
+   Scroll Reveal Animation
+========================= */
+
+.fadeUp {
+  opacity: 0;
+  transform: translateY(60px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.active .fadeUp {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger */
+
+.delay1 {
+  transition-delay: 0.1s;
+}
+
+.delay2 {
+  transition-delay: 0.25s;
+}
+
+.delay3 {
+  transition-delay: 0.4s;
+}

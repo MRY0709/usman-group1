@@ -1,0 +1,83 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background: #071b3a;
+  z-index: 999;
+}
+
+.container {
+  max-width: 1400px;
+  height: 90px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 170px;
+  height: 60px;
+  object-fit: contain;
+  display: block;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.navLink {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navLink:hover,
+.active {
+  color: #d4af37;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0;
+  height: 2px;
+  background: #d4af37;
+  transition: 0.3s;
+}
+
+.navLink:hover::after,
+.active::after {
+  width: 100%;
+}
+
+.contactBtn {
+  background: #d4af37;
+  color: white;
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contactBtn:hover {
+  background: white;
+  color: #071b3a;
+}

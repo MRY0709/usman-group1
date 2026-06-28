@@ -1,0 +1,281 @@
+.footer {
+  background: #071b3a;
+  color: white;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  text-align: center;
+
+  padding: 90px 20px 70px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.subtitle {
+  display: inline-block;
+
+  color: #d4af37;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+.cta h2 {
+  font-size: 54px;
+
+  line-height: 1.15;
+
+  font-weight: 800;
+
+  margin-bottom: 30px;
+}
+
+.ctaButtons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+/* =========================
+   Buttons
+========================= */
+
+.primaryBtn,
+.secondaryBtn {
+  height: 58px;
+
+  padding: 0 34px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.35s;
+}
+
+.primaryBtn {
+  background: #d4af37;
+
+  color: white;
+
+  border: none;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-4px);
+
+  background: #c69f26;
+}
+
+.secondaryBtn {
+  background: transparent;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  color: white;
+}
+
+.secondaryBtn:hover {
+  background: white;
+
+  color: #071b3a;
+
+  transform: translateY(-4px);
+}
+
+/* =========================
+   Footer
+========================= */
+
+.container {
+  max-width: 1440px;
+
+  margin: auto;
+
+  padding: 70px 35px;
+
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr 1.3fr;
+
+  gap: 60px;
+}
+
+.column h4 {
+  font-size: 22px;
+
+  margin-bottom: 24px;
+
+  color: white;
+}
+
+.logo {
+  font-size: 34px;
+
+  font-weight: 800;
+
+  margin-bottom: 22px;
+}
+
+.column p {
+  color: rgba(255, 255, 255, 0.72);
+
+  line-height: 1.9;
+
+  margin-bottom: 28px;
+}
+
+.column a {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  text-decoration: none;
+
+  transition: 0.3s;
+
+  cursor: pointer;
+}
+
+.column a:hover {
+  color: #d4af37;
+
+  padding-left: 6px;
+}
+
+/* Contact */
+
+.info {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 18px;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* Social */
+
+.socials {
+  display: flex;
+
+  gap: 14px;
+}
+
+.socials a {
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  transition: 0.35s;
+}
+
+.socials a:hover {
+  background: #d4af37;
+
+  color: #071b3a;
+
+  transform: translateY(-4px);
+}
+
+/* Bottom */
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  padding: 26px 20px;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 15px;
+}
+/* =========================
+   Tablet
+========================= */
+
+/*@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   Mobile
+========================= */
+
+/*@media (max-width: 768px) {
+  .cta {
+    padding: 70px 20px 50px;
+  }
+
+  .cta h2 {
+    font-size: 38px;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+
+    padding: 60px 20px;
+
+    gap: 45px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+}
+.column h4::after,
+.logo::after {
+  content: "";
+
+  display: block;
+
+  width: 48px;
+
+  height: 3px;
+
+  margin-top: 10px;
+
+  background: #d4af37;
+
+  border-radius: 50px;
+}
