@@ -46,18 +46,14 @@ export default function CompanySlider() {
       <Swiper
         modules={[Autoplay, Pagination]}
         slidesPerView={4}
+        slidesPerGroup={4}
         spaceBetween={18}
-        loop
+        loop={false}
         autoplay={{
           delay: 3500,
           disableOnInteraction: false,
         }}
         pagination={{ clickable: true }}
-        breakpoints={{
-          320: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 4 },
-        }}
       >
         {companies.map((company, index) => (
           <SwiperSlide
