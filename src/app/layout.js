@@ -19,10 +19,11 @@ export default function RootLayout({ children }) {
       <body className={outfit.className}>
         <DesktopScale />
 
-        <div id="desktop-root">
+        <div id="desktop-navbar">
           <Navbar />
-          {children}
         </div>
+
+        <div id="desktop-root">{children}</div>
       </body>
     </html>
   );

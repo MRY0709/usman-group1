@@ -1,0 +1,149 @@
+.section {
+  padding: 78px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 35px;
+  display: grid;
+  grid-template-columns: 1fr 0.92fr;
+  align-items: center;
+  gap: 64px;
+}
+
+.subtitle {
+  display: inline-block;
+  color: #d4af37;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.content h2 {
+  color: #071b3a;
+  font-size: 48px;
+  line-height: 1.12;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.content p {
+  color: #667085;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 22px;
+}
+
+.point {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #071b3a;
+  font-size: 16px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.point svg {
+  flex: 0 0 auto;
+  color: #188447;
+  margin-top: 2px;
+}
+
+.imageWrap {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #071b3a;
+  box-shadow: 0 30px 70px rgba(7, 27, 58, 0.18);
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.imageWrap:hover .image {
+  transform: scale(1.07);
+}
+
+.imageWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(7, 27, 58, 0.45), transparent 55%);
+}
+
+.badge {
+  position: absolute;
+  left: 28px;
+  bottom: 28px;
+  z-index: 3;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(16px);
+  color: #071b3a;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+.badge strong {
+  display: block;
+  color: #d4af37;
+  font-size: 36px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.badge span {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.fadeUp,
+.fadeRight {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.fadeUp {
+  transform: translateY(42px);
+}
+
+.fadeRight {
+  transform: translateX(70px);
+}
+
+.active .fadeUp,
+.active .fadeRight {
+  opacity: 1;
+  transform: none;
+}
+
+.delay1 {
+  transition-delay: 0.15s;
+}
+
+.delay2 {
+  transition-delay: 0.3s;
+}
+
+.delay3 {
+  transition-delay: 0.45s;
+}

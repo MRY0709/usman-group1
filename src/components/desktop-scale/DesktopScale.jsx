@@ -4,25 +4,39 @@ import { useEffect } from "react";
 
 export default function DesktopScale() {
   useEffect(() => {
-    const DESIGN_WIDTH = 1540;
+    const DESIGN_WIDTH = 1440;
+    const NAVBAR_HEIGHT = 90;
 
     function scaleDesktop() {
       const root = document.getElementById("desktop-root");
-      if (!root) return;
+      const navbar = document.getElementById("desktop-navbar");
+      if (!root || !navbar) return;
 
-      // 👇 Missing tha
-      const scale = Math.min(window.innerWidth / DESIGN_WIDTH, 1);
+      const scale = window.innerWidth / DESIGN_WIDTH;
 
-      root.style.width = DESIGN_WIDTH + "px";
-      root.style.transformOrigin = "top left";
-      root.style.transform = `scale(${scale})`;
+      [root, navbar].forEach((element) => {
+        element.style.width = DESIGN_WIDTH + "px";
+        element.style.transformOrigin = "top left";
+        element.style.transform = `scale(${scale})`;
+      });
+
+      navbar.style.height = NAVBAR_HEIGHT * scale + "px";
+
+      root.style.height = "auto";
+      if (scale < 1) {
+        root.style.height = root.scrollHeight * scale + "px";
+      }
     }
 
     scaleDesktop();
 
     window.addEventListener("resize", scaleDesktop);
+    window.addEventListener("load", scaleDesktop);
 
-    return () => window.removeEventListener("resize", scaleDesktop);
+    return () => {
+      window.removeEventListener("resize", scaleDesktop);
+      window.removeEventListener("load", scaleDesktop);
+    };
   }, []);
 
   return null;

@@ -19,6 +19,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
@@ -27,6 +29,7 @@ body {
   color: #111827;
 
   overflow-x: hidden;
+  overflow-y: visible;
 }
 
 a {
@@ -99,7 +102,6 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  overflow-y: auto;
   background: #fff;
 }
 
@@ -107,9 +109,17 @@ body {
   position: relative;
 }
 
+#desktop-navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+}
+
 #desktop-root {
   position: relative;
-  width: 1540px;
+  width: 1440px;
   transform-origin: top left;
   margin: 0;
 }

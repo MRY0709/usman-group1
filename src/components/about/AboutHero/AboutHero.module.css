@@ -1,0 +1,173 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background: #071b3a;
+}
+
+/* ===========================
+   BACKGROUND IMAGE
+=========================== */
+
+.bgImage {
+  object-fit: cover;
+  object-position: center right;
+  animation: heroZoom 18s ease-in-out infinite alternate;
+  z-index: 1;
+}
+
+@keyframes heroZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+/* ===========================
+   OVERLAY
+=========================== */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 27, 58, 0.72) 0%,
+    rgba(7, 27, 58, 0.48) 40%,
+    rgba(7, 27, 58, 0.2) 68%,
+    rgba(7, 27, 58, 0.08) 100%
+  );
+  z-index: 2;
+}
+
+/* ===========================
+   LEFT PANEL
+=========================== */
+
+.leftPanel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: #071b3a;
+  clip-path: polygon(0 0, 78% 0, 100% 100%, 0 100%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 90px 22px;
+}
+
+/* ===========================
+   GOLD EDGE
+=========================== */
+
+.goldEdge {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #f1cf55 0%, #d4af37 48%, #bd9221 100%);
+  clip-path: polygon(38.9% 0, 39.35% 0, 50.25% 100%, 49.8% 100%);
+  z-index: 6;
+  box-shadow: 0 0 22px rgba(212, 175, 55, 0.38);
+  pointer-events: none;
+}
+
+/* ===========================
+   LABEL
+=========================== */
+
+.label {
+  color: #d4af37;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+/* ===========================
+   HEADING
+=========================== */
+
+.leftPanel h1 {
+  color: white;
+  max-width: 500px;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -1px;
+  margin-bottom: 22px;
+}
+
+/* ===========================
+   GOLD LINE
+=========================== */
+
+.goldLine {
+  width: 78px;
+  height: 4px;
+  background: #d4af37;
+  border-radius: 10px;
+  margin-bottom: 26px;
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.35);
+}
+
+/* ===========================
+   PARAGRAPH
+=========================== */
+
+.leftPanel p {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 430px;
+  margin-bottom: 28px;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons {
+  display: flex;
+  gap: 18px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  width: 185px;
+  height: 54px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  transition: 0.35s;
+}
+
+.primaryBtn {
+  background: #d4af37;
+  color: white;
+}
+
+.primaryBtn:hover {
+  background: #bf9826;
+  transform: translateY(-4px);
+}
+
+.secondaryBtn {
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  color: white;
+}
+
+.secondaryBtn:hover {
+  background: white;
+  color: #071b3a;
+  transform: translateY(-4px);
+}
